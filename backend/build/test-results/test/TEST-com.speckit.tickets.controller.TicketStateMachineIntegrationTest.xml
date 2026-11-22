@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.speckit.tickets.controller.TicketStateMachineIntegrationTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2026-09-10T03:26:01.241Z" hostname="TTNPL-6995" time="0.337">
+  <properties/>
+  <testcase name="cancelledCannotReopen()" classname="com.speckit.tickets.controller.TicketStateMachineIntegrationTest" time="0.054"/>
+  <testcase name="resolvedCannotReopen()" classname="com.speckit.tickets.controller.TicketStateMachineIntegrationTest" time="0.051"/>
+  <testcase name="closedCannotReopen()" classname="com.speckit.tickets.controller.TicketStateMachineIntegrationTest" time="0.061"/>
+  <testcase name="openCanBeCancelled()" classname="com.speckit.tickets.controller.TicketStateMachineIntegrationTest" time="0.029"/>
+  <testcase name="inProgressCanBeCancelled()" classname="com.speckit.tickets.controller.TicketStateMachineIntegrationTest" time="0.039"/>
+  <testcase name="openCannotSkipToClosed()" classname="com.speckit.tickets.controller.TicketStateMachineIntegrationTest" time="0.019"/>
+  <testcase name="validLifecycleTransitionsSucceed()" classname="com.speckit.tickets.controller.TicketStateMachineIntegrationTest" time="0.049"/>
+  <system-out><![CDATA[2026-09-10T08:56:01.242+05:30  INFO 42532 --- [support-ticket-backend] [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.speckit.tickets.controller.TicketStateMachineIntegrationTest]: TicketStateMachineIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-09-10T08:56:01.252+05:30  INFO 42532 --- [support-ticket-backend] [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.speckit.tickets.TicketApplication for test class com.speckit.tickets.controller.TicketStateMachineIntegrationTest
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

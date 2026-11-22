@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    url: ${DATABASE_URL:jdbc:postgresql://localhost:5432/tickets}
+    driver-class-name: org.postgresql.Driver
+    username: ${DATABASE_USERNAME:ticket_user}
+    password: ${DATABASE_PASSWORD:}
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect

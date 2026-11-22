@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.speckit.tickets.controller.TicketApiIntegrationTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-09-10T03:25:49.454Z" hostname="TTNPL-6995" time="11.779">
+  <properties/>
+  <testcase name="createTicketWithValidationErrors()" classname="com.speckit.tickets.controller.TicketApiIntegrationTest" time="1.187"/>
+  <testcase name="updateTicketAndAddComment()" classname="com.speckit.tickets.controller.TicketApiIntegrationTest" time="0.451"/>
+  <testcase name="searchAndFilterTickets()" classname="com.speckit.tickets.controller.TicketApiIntegrationTest" time="0.164"/>
+  <system-out><![CDATA[08:55:49.570 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.speckit.tickets.controller.TicketApiIntegrationTest]: TicketApiIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+08:55:49.673 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.speckit.tickets.TicketApplication for test class com.speckit.tickets.controller.TicketApiIntegrationTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.1)
+
+2026-09-10T08:55:50.038+05:30  INFO 42532 --- [support-ticket-backend] [    Test worker] c.s.t.c.TicketApiIntegrationTest         : Starting TicketApiIntegrationTest using Java 21.0.10 with PID 42532 (started by Tarundeep Singh in D:\Projects\SpecKit\backend)
+2026-09-10T08:55:50.038+05:30  INFO 42532 --- [support-ticket-backend] [    Test worker] c.s.t.c.TicketApiIntegrationTest         : The following 1 profile is active: "test"
+2026-09-10T08:55:50.596+05:30  INFO 42532 --- [support-ticket-backend] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-09-10T08:55:50.661+05:30  INFO 42532 --- [support-ticket-backend] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 52 ms. Found 2 JPA repository interfaces.
+2026-09-10T08:55:51.183+05:30  INFO 42532 --- [support-ticket-backend] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-10T08:55:51.355+05:30  INFO 42532 --- [support-ticket-backend] [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:tickets_test user=SA
+2026-09-10T08:55:51.373+05:30  INFO 42532 --- [support-ticket-backend] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-10T08:55:51.451+05:30  INFO 42532 --- [support-ticket-backend] [    Test worker] org.flywaydb.core.FlywayExecutor         : Database: jdbc:h2:mem:tickets_test (H2 2.3)
+2026-09-10T08:55:51.467+05:30  WARN 42532 --- [support-ticket-backend] [    Test worker] o.f.c.internal.database.base.Database    : Flyway upgrade recommended: H2 2.3.232 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.224.
+2026-09-10T08:55:51.500+05:30  INFO 42532 --- [support-ticket-backend] [    Test worker] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table "PUBLIC"."flyway_schema_history" does not exist yet
+2026-09-10T08:55:51.500+05:30  INFO 42532 --- [support-ticket-backend] [    Test worker] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.020s)
+2026-09-10T08:55:51.517+05:30  INFO 42532 --- [support-ticket-backend] [    Test worker] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+2026-09-10T08:55:51.556+05:30  INFO 42532 --- [support-ticket-backend] [    Test worker] o.f.core.internal.command.DbMigrate      : Current version of schema "PUBLIC": << Empty Schema >>
+2026-09-10T08:55:51.566+05:30  INFO 42532 --- [support-ticket-backend] [    Test worker] o.f.core.internal.command.DbMigrate      : Migrating schema "PUBLIC" to version "1 - create ticket tables"
+2026-09-10T08:55:51.581+05:30  INFO 42532 --- [support-ticket-backend] [    Test worker] o.f.core.internal.command.DbMigrate      : Successfully applied 1 migration to schema "PUBLIC", now at version v1 (execution time 00:00.010s)
+2026-09-10T08:55:51.909+05:30  INFO 42532 --- [support-ticket-backend] [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-09-10T08:55:52.102+05:30  INFO 42532 --- [support-ticket-backend] [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.4.Final
+2026-09-10T08:55:52.194+05:30  INFO 42532 --- [support-ticket-backend] [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-09-10T08:55:52.698+05:30  INFO 42532 --- [support-ticket-backend] [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-09-10T08:55:52.828+05:30  INFO 42532 --- [support-ticket-backend] [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-09-10T08:55:54.552+05:30  INFO 42532 --- [support-ticket-backend] [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-09-10T08:55:54.589+05:30  INFO 42532 --- [support-ticket-backend] [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-09-10T08:55:55.307+05:30  INFO 42532 --- [support-ticket-backend] [    Test worker] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-09-10T08:55:59.135+05:30  INFO 42532 --- [support-ticket-backend] [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:tickets_test'
+2026-09-10T08:55:59.271+05:30  INFO 42532 --- [support-ticket-backend] [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-09-10T08:55:59.273+05:30  INFO 42532 --- [support-ticket-backend] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-09-10T08:55:59.277+05:30  INFO 42532 --- [support-ticket-backend] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2026-09-10T08:55:59.375+05:30  INFO 42532 --- [support-ticket-backend] [    Test worker] c.s.t.c.TicketApiIntegrationTest         : Started TicketApiIntegrationTest in 9.579 seconds (process running for 10.649)
+]]></system-out>
+  <system-err><![CDATA[Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build what is described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org/mockito/Mockito.html#0.3
+WARNING: A Java agent has been loaded dynamically (C:\Users\Tarundeep Singh\AppData\Local\Temp\cursor-sandbox-cache\38d6d0af2150ca644b506e817dd057a7\gradle\caches\modules-2\files-2.1\net.bytebuddy\byte-buddy-agent\1.15.11\a38b16385e867f59a641330f0362ebe742788ed8\byte-buddy-agent-1.15.11.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+]]></system-err>
+</testsuite>
